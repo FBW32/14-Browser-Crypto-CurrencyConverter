@@ -11,7 +11,7 @@ let target=currency.value;
 //get change from the website
 fetch(`https://api.cryptonator.com/api/ticker/${base}-${target}`).then(resp=>resp.json())
 .then(end=>{
-    let diff=end.ticker.change;
+    let diff=end.ticker.price;
     console.log(diff);
 let amount=document.querySelector("#amount").value;
 console.log(amount);
